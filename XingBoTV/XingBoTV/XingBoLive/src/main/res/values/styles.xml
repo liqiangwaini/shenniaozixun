@@ -1,0 +1,70 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Navigation Header -->
+    <style name="NavPage">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+        <!-- <item name="android:background">@drawable/nav_page</item> -->
+        <item name="android:background">@color/navpage</item>
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!--边框-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--半透明-->
+        <item name="android:windowNoTitle">true</item>
+        <!--无标题-->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--模糊-->
+    </style>
+
+    <style name="style_popup">
+        <item name="android:windowEnterAnimation">@anim/popup_in</item>
+        <!-- 指定显示的动画xml  -->
+        <item name="android:windowExitAnimation">@anim/popup_out</item>
+        <!-- 指定消失的动画xml  -->
+    </style>
+
+    <style name="homepageUserInfo">
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="MIS_NO_ACTIONBAR" parent="Theme.AppCompat.Light.NoActionBar"></style>
+
+    <style name="apply_anchor_text_style">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/c333333</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginTop">18dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">33dp</item>
+    </style>
+
+    <style name="apply_anchor_edit_style">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColorHint">@color/colorTextG1</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">12dp</item>
+        <item name="android:layout_marginTop">18dp</item>
+        <item name="android:background">@drawable/xingbo_dialog_bg</item>
+        <item name="android:width">270dp</item>
+        <item name="android:height">33dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:textColor">@color/c333333</item>
+    </style>
+
+</resources>

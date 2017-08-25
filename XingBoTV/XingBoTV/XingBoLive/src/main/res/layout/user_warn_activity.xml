@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cEEEEEE">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/cffffff">
+
+        <ImageButton
+            android:id="@+id/top_back_btn"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:id="@+id/model_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/top_back_btn"
+            android:gravity="center"
+            android:paddingRight="50dp"
+            android:text="提醒设置"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/user_warn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/top_bar"
+        android:layout_marginTop="5dp"
+        android:background="@color/cffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="推送提醒"
+            android:textColor="@color/c333333"
+            android:textSize="15sp" />
+        <CheckBox
+            android:layout_width="54dp"
+            android:layout_height="33dp"
+            android:id="@+id/push_all"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/warn_setting_selector"
+            android:button="@null" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/warn_text"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/user_warn"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:text="提醒方式"
+        android:textColor="@color/c666666"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:id="@+id/user_shock"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/warn_text"
+        android:background="@color/cffffff"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="震动"
+            android:textColor="@color/c333333"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:layout_width="54dp"
+            android:layout_height="33dp"
+            android:id="@+id/push_shock"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/warn_setting_selector"
+            android:button="@null" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/user_voice"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/user_shock"
+        android:layout_marginTop="5dp"
+        android:background="@color/cffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="声音"
+            android:textColor="@color/c333333"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:layout_width="54dp"
+            android:layout_height="33dp"
+            android:id="@+id/push_voice"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/warn_setting_selector"
+            android:button="@null" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/user_no"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/user_voice"
+        android:layout_marginTop="5dp"
+        android:background="@color/cffffff">
+
+        <TextView
+            android:id="@+id/text_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="免打扰模式"
+            android:textColor="@color/c333333"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/text_no"
+            android:textColor="@color/c666666"
+            android:text="(晚23:00-早8:00)"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:layout_width="54dp"
+            android:layout_height="33dp"
+            android:id="@+id/push_no"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/warn_setting_selector"
+            android:button="@null" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

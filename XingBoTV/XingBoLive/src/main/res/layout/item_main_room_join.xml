@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    >
+
+    <TextView
+        android:shadowRadius="2"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowColor="@color/textcolor_shadow"
+        android:textSize="17sp"
+        android:id="@+id/item_main_room_join_nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="皇家浪子"
+        android:textColor="@color/main_room_yellow_color" />
+</LinearLayout>

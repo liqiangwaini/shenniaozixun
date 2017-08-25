@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:background="@color/cEEEEEE">
+
+    <RelativeLayout
+        android:id="@+id/live_list_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_top_margin"
+        android:layout_alignParentTop="true"
+        android:background="@color/cEEEEEE"
+        android:orientation="horizontal">
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/mine_btn"-->
+            <!--android:layout_width="45dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:background="@null"-->
+            <!--android:paddingLeft="5dp"-->
+            <!--android:scaleType="centerInside"-->
+            <!--android:src="@mipmap/main_user_normal" />-->
+        <com.xingbobase.view.FrescoImageView
+            android:id="@+id/header"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:paddingLeft="10dp"
+            android:layout_centerVertical="true"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:placeholderImage="@mipmap/avatar_placeholder"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:roundAsCircle="true"
+            fresco:roundingBorderColor="@color/cEEEEEE"
+            fresco:roundingBorderWidth="2dp"
+            />
+        <ImageButton
+            android:id="@+id/search_btn"
+            android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingRight="5dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/home_search_ic" />
+
+        <com.xingbo.live.view.widget.PagerSlidingTabStrip
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/main_top_models_tab_bar"
+            android:layout_width="220dp"
+            android:layout_height="@dimen/home_top_margin"
+            android:layout_centerHorizontal="true"
+            android:background="@color/cEEEEEE"
+            android:textSize="17sp"
+            app:pstsDividerColor="@color/transparent"
+            app:pstsDividerPadding="0dp"
+            app:pstsIndicatorColor="@color/colorText3"
+            app:pstsIndicatorHeight="2dp"
+            app:pstsIndicatorPadding="1dp"
+            app:pstsShouldExpand="true"
+            app:pstsTabBackground="@drawable/background_tab"
+            app:pstsTabPaddingLeftRight="5dp"
+            app:pstsUnderlineColor="@color/transparent"
+            app:pstsUnderlineHeight="1dp"
+            app:selectedTabTextColor="@color/title" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_hot_models_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/live_list_bar" />
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#363435"
+    >
+        <FrameLayout
+            android:id="@+id/crop_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            >
+            <com.mao.starway.common.libs.cropzoom.imagecropzoom.view.ImageCropView
+                xmlns:imagecrop="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                imagecrop:setInnerGridMode="on"
+                imagecrop:gridInnerStroke="1dp"
+                imagecrop:gridInnerColor="#66ffffff"
+                imagecrop:setOuterGridMode="on"
+                imagecrop:gridOuterStroke="1dp"
+                imagecrop:gridOuterColor="#363435"/>
+            <RelativeLayout
+                android:layout_below="@+id/crop_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#363435"
+                android:layout_gravity="bottom"
+                >
+                <Button
+                    android:id="@+id/cancel_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="取消"
+                    android:background="@null"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    />
+                <Button
+                    android:id="@+id/crop_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:textColor="#FFFFFF"
+                    android:text="剪切"
+                    android:textSize="14sp"
+                    />
+
+            </RelativeLayout>
+        </FrameLayout>
+</LinearLayout>

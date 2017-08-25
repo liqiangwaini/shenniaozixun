@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cEEEEEE"
+    android:descendantFocusability="blocksDescendants"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/homepage_contribute"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:background="@color/cffffff"
+            android:descendantFocusability="blocksDescendants"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="粉丝贡献榜"
+                android:textColor="@color/c333333"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/homepage_contribute_right"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:background="@null"
+                android:src="@mipmap/right_btn_icon" />
+
+            <com.xingbobase.view.IFrescoImageView
+                android:visibility="visible"
+                android:id="@+id/contributor3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:clickable="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/homepage_contribute_right"
+                fresco:placeholderImageScaleType="centerCrop"
+                fresco:placeholderImage="@mipmap/avatar_placeholder"
+                fresco:roundAsCircle="true"
+                fresco:roundingBorderColor="@color/gray_border_E5E5E5"
+                fresco:roundingBorderWidth="1dp" />
+
+            <com.xingbobase.view.IFrescoImageView
+                android:visibility="visible"
+                android:id="@+id/contributor2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/contributor3"
+                fresco:placeholderImageScaleType="centerCrop"
+                fresco:placeholderImage="@mipmap/avatar_placeholder"
+                android:clickable="true"
+                fresco:roundAsCircle="true"
+                fresco:roundingBorderColor="@color/gray_border_E5E5E5"
+                fresco:roundingBorderWidth="1dp" />
+
+            <com.xingbobase.view.IFrescoImageView
+                android:visibility="visible"
+                android:id="@+id/contributor1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:clickable="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/contributor2"
+                fresco:placeholderImageScaleType="centerCrop"
+                fresco:placeholderImage="@mipmap/avatar_placeholder"
+                fresco:roundAsCircle="true"
+                fresco:roundingBorderColor="@color/gray_border_E5E5E5"
+                fresco:roundingBorderWidth="1dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/homepage_userinfo"
+            android:layout_width="match_parent"
+            android:layout_height="195dp"
+            android:layout_below="@id/homepage_contribute"
+            android:background="@color/cffffff"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:id="@+id/rl_xingboid">
+            <TextView
+                android:id="@+id/xingboid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="星播ID"
+                android:textColor="@color/c666666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/homepage_xingbo_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_toRightOf="@id/xingboid"
+                android:textColor="@color/c333333"
+                android:text="星播250250"
+                android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_xingboid"
+                android:layout_marginTop="18dp"
+                android:id="@+id/rl_xingbostar">
+
+            <TextView
+                android:id="@+id/level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="主播等级"
+                android:textColor="@color/c666666"
+                android:layout_centerVertical="true"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/homepage_userstar_level"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/level"
+                android:src="@mipmap/star_level_icon_0" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_xingbolevel"
+                android:layout_marginTop="18dp"
+
+                android:layout_below="@+id/rl_xingbostar">
+
+            <TextView
+                android:id="@+id/richlevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c666666"
+                android:text="财富等级"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/homepage_userrich_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@+id/richlevel"
+                android:src="@mipmap/rich_level_icon_0" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_xingbointro"
+                android:layout_marginTop="18dp"
+                android:layout_below="@+id/rl_xingbolevel">
+            <TextView
+                android:id="@+id/personalsign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c666666"
+                android:text="个性签名"
+                android:textSize="15sp" />
+
+            <TextView
+                android:textSize="15sp"
+                android:id="@+id/homepage_personal_sign"
+                android:layout_width="245dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c333333"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/personalsign"
+                android:text="这里什么也没有,快喊主播来完善" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

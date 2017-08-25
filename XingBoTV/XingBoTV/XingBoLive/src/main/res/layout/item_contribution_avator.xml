@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="100dp">
+
+        <com.xingbobase.view.FrescoImageView
+            android:layout_marginTop="10dp"
+            android:id="@+id/civ_item_contribution_avator"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            app:placeholderImage="@mipmap/avatar_placeholder"
+            app:roundAsCircle="true" />
+        <TextView
+            android:id="@+id/civ_item_contribution_sub"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="35dp"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@mipmap/gold_guard_bg"
+            android:text="金"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/tv_item_contribution_nick"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/civ_item_contribution_avator"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="亭亭玉ssssssss"
+            android:textColor="@color/c666666"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/civ_item_contribution_time"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tv_item_contribution_nick"
+            android:textSize="12sp"
+            android:textColor="@color/c999999"
+            android:text="150天"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

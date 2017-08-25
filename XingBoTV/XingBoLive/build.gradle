@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        xingboconfig {
+            keyAlias 'xingbo.keystore'
+            keyPassword '3th5u44xingbo'
+            storeFile file('D:/AndroidWork/XingboAndroid/keystore/xingbo.keystore')
+            storePassword '3th5u44xingbo'
+
+        }
+    }
+
+    compileSdkVersion 22
+    buildToolsVersion '22.0.1'
+
+    defaultConfig {
+        applicationId "com.xingbo.live"
+        multiDexEnabled true
+
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 23
+        versionName "2.0.3"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // 友盟多渠道打包
+    productFlavors {
+        xingbo_online{}
+        yingyongbao{}
+    }
+//
+    productFlavors.all { flavor ->
+        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+}
+
+dependencies {
+    compile 'com.github.ctiao:DanmakuFlameMaster:0.4.9'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    provided files('libs/androidasync-2.1.6.jar')
+    provided files('libs/bugrpt.jar')
+    compile project(':CommonXingbo')
+    compile project(':Umeng')
+    compile project(':PushSDK')
+    compile project(':vitamio')
+    compile project(':AlivcLiveRecord-release1.0.0')
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+}

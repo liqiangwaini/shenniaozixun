@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_item_box"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/cffffff"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+    <com.xingbobase.view.FrescoImageView
+        android:id="@+id/user_header"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImage="@mipmap/avatar_placeholder"
+        fresco:retryImageScaleType="centerCrop"
+        fresco:roundAsCircle="true"
+        fresco:roundingBorderColor="#00FFFFFF" />
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/user_header"
+        android:text="昵称"
+        android:textColor="@color/c333333"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/list_item_personal_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nick"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/user_header"
+        android:maxLength="20"
+        android:text="他很懒，什么都没有说..."
+        android:textColor="@color/c666666"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/list_item_personal_sign"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/user_header"
+        android:text="ID:"
+        android:textColor="@color/c333333"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/id_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/list_item_personal_sign"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/text1"
+        android:text="123345"
+        android:textColor="@color/c333333"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/list_item_personal_sign"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/id_num"
+        android:text="粉丝:"
+        android:textColor="@color/c333333"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/fans_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/list_item_personal_sign"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/text2"
+        android:text="20万"
+        android:textColor="@color/c333333"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/list_item_fcous"
+        android:layout_width="70dp"
+        android:layout_height="33dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/round_button"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="关注"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+</RelativeLayout>

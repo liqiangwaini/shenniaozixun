@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/user_msg_chat_ctime_fl_right"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/user_msg_chat_ctime_right"
+            android:layout_width="65dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:background="@drawable/pri_msg_time_bg"
+            android:gravity="center"
+            android:text="ctime"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </FrameLayout>
+
+    <com.xingbobase.view.FrescoImageView
+        android:id="@+id/user_msg_chatavatar_right"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/user_msg_chat_ctime_fl_right"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImage="@mipmap/avatar_placeholder"
+        fresco:retryImageScaleType="centerCrop"
+        fresco:roundAsCircle="true"
+        fresco:roundedCornerRadius="2dp"
+        fresco:roundingBorderColor="#00FFFFFF" />
+
+    <TextView
+        android:id="@+id/user_msg_chatuser_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_msg_chat_ctime_fl_right"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/user_msg_chatavatar_right"
+        android:background="@drawable/pri_msg_right_bg"
+        android:maxWidth="250dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="10dp"
+        android:gravity="center_vertical"
+        android:text="发送者gtr"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+</RelativeLayout>

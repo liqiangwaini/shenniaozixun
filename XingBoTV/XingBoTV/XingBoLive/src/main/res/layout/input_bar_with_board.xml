@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/input_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/emotion_pager_container"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/danmu_chat_switch_btn"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/inputbar_checkbox_selector"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:textColor="@color/second_text_AEAEAE"
+            android:textSize="14sp" />
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_message_bg">
+
+            <com.xingbo.live.emotion.EmotionEditText
+                android:id="@+id/input_editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/key_emotion_switch_btn"
+                android:background="@null"
+                android:hint="说些你想说的吧"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColorHint="#cccccc"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/key_emotion_switch_btn"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerInside"
+                android:src="@mipmap/emotion"
+                android:text="表情/键盘" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/send_btn"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/chat_input_bar_send_btn_bg"
+            android:text="发送"
+            android:textColor="@color/cffffff"
+            android:textSize="15sp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/emotion_pager_container"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:background="#EFEFEF"
+        android:visibility="gone">
+
+        <com.xingbo.live.emotion.EmotionPager
+            android:id="@+id/emotion_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.xingbobase.view.widget.CirclePageIndicator xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:background="#00CCCCCC"
+            android:padding="3dp"
+            app:fillColor="#ffFFFFFF"
+            app:pageColor="#9c959595"
+            app:radius="3dp"
+            app:strokeColor="#00000000"
+            app:strokeWidth="0dp" />
+    </RelativeLayout>
+
+</LinearLayout>

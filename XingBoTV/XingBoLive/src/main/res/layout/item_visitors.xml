@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xingbobase.view.FrescoImageView
+        android:id="@+id/civ_item_visitor"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:padding="2dp"
+        app:actualImageScaleType="focusCrop"
+        app:placeholderImage="@mipmap/avatar_placeholder"
+        app:roundAsCircle="true" />
+</LinearLayout>

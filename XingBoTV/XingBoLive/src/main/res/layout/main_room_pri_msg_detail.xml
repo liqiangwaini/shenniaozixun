@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ceeeeee">
+
+    <FrameLayout
+        android:id="@+id/pri_msg_detail_back"
+        android:layout_width="40dp"
+        android:layout_height="44dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/back" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/pri_msg_detail_nick"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:button="@null"
+        android:checked="true"
+        android:gravity="center"
+        android:text="吆吆吆吆"
+        android:textColor="@color/c333333"
+        android:textSize="17sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/pri_msg_detail_nick"
+        android:background="@color/colorTextG1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/pri_msg_detail_nick"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <com.xingbobase.extra.pulltorefresh.PullToRefreshListView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            ptr:ptrDrawable="@mipmap/common_loading_icon"
+            ptr:ptrMode="pullDownFromTop"
+            android:scrollbars="none"
+            android:listSelector="@color/transparent"
+            android:id="@+id/pri_msg_detail_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="43dp"
+            android:layout_marginTop="1dp"
+            android:divider="@null"
+            android:stackFromBottom="false" />
+
+        <EditText
+            android:id="@+id/pri_msg_detail_edit"
+            android:layout_width="260dp"
+            android:layout_height="33dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/main_room_pri_msg_edit_bg"
+            android:hint="输入消息"
+            android:paddingLeft="12dp"
+            android:textColorHint="@color/c999999"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/pri_msg_detail_send"
+            android:layout_width="75dp"
+            android:layout_height="33dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/pri_msg_detail_edit"
+            android:background="@drawable/chat_input_bar_send_btn_bg"
+            android:gravity="center"
+            android:text="发送"
+            android:textColor="@color/ceeeeee"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

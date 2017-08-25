@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black_363636">#ff363636</color>
+    <color name="black_787878">#ff787878</color>
+    <color name="red">#ff0000</color>
+    <!--礼物项被选中和未被选中背景色-->
+    <color name="gift_item_selected">#FFFFFF</color>
+    <color name="gift_item_normal">#D0CFD7</color>
+    <!--弹窗65%不透明颜色-->
+    <color name="pop_win_bg_65">#8c000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="navpage">#FFE1E8EB</color>
+
+    <!--直播间系统消息文字与-->
+    <color name="system_textcolor">#FC18FF</color>
+    <!--阴影色-->
+    <color name="textcolor_shadow">#010101</color>
+    <!--直播间聊天文字色-->
+    <color name="message_textcolor">#FF1874</color>
+    <!--直播间  禁言系统提示 文字色-->
+    <color name="gag_textcolor">#01A1EC</color>
+    <!--直播间  送礼昵称 文字色-->
+    <color name="send_gift_nick_textcolor">#FD4790</color>
+    <!--直播间  送礼礼物名称 文字色-->
+    <color name="send_giftnick_textcolor">#FC9C1F</color>
+    <color name="orange">#8125309b</color>
+    <!--顶部背景色-->
+    <color name="top_bag">#A7C0DC</color>
+
+    <!--首页顶部背景色-->
+    <color name="cffffff">#FFFFFF</color>
+    <color name="ceeeeee">#EEEEEE</color>
+
+    <color name="black_50">#80000000</color>
+    <!--字体颜色 T1-->
+    <color name="title">#333333</color>
+    <color name="c333333">#333333</color>
+    <color name="c666666">#666666</color>
+    <color name="c999999">#999999</color>
+
+    <color name="colorText3">#f88fc8</color>
+    <color name="colorText4">#63092c</color>
+    <color name="colorText5">#ff1847</color>
+
+
+    <color name="pink">#f88fc8</color>
+    <color name="pink_dark">#af879d</color>
+    <color name="grey_light">#99999999</color>
+    <!-- 充值页面  账户余额颜色-->
+    <color name="userBalances">#ff1874</color>
+    <!-- 充值页面  item星币钱数-->
+    <color name="rechargeCoinMoney">#f88fcb</color>
+
+    <!--背景色-->
+    <color name="colorBackground">#F0F0F0</color>
+    <!--app主题色，应用于导航，按钮-->
+    <color name="colorTheme">#80407A</color>
+    <!--主题色激活态，如按钮高亮-->
+    <color name="colorThemeActive">#A15C9A</color>
+    <!--红色标签/提示-->
+    <color name="colorLabelRed">#FF447D</color>
+    <!--红色标签/提示高亮-->
+    <color name="colorLabelRedActive">#FF89AB</color>
+    <!--黄色色标签/提示-->
+    <color name="colorLabelYellow">#FFAE20</color>
+    <!--黄色色标签/提示高亮-->
+    <color name="colorLabelYellowActive">#FFCD35</color>
+    <!--黄色蒙版-->
+    <color name="colorLabelYellowMask">#4DFFAE20</color>
+    <!--红色-->
+    <color name="colorRed">#FF3333</color>
+    <!--文字白色-->
+    <color name="colorTextWhite">#FFFFFF</color>
+    <!--文字G1-->
+    <color name="colorTextG1">#CCCCCC</color>
+    <!--文字G2-->
+    <color name="colorTextG2">#999999</color>
+    <!--文字G3-->
+    <color name="colorTextG3">#666666</color>
+    <!--文字G4-->
+    <color name="colorTextG4">#333333</color>
+    <!--文字black-->
+    <color name="colorTextBlack">#000000</color>
+    <!--gray1-->
+    <color name="colorGray1">#F0F0F0</color>
+    <!--light gray-->
+    <color name="colorLightGray">#E6E6E6</color>
+    <!--gray2-->
+    <color name="colorGray2">#DCDCDC</color>
+    <!--gray3-->
+    <color name="colorGray3">#C8C8C8</color>
+    <!--gray4-->
+    <color name="colorGray4">#787878</color>
+    <!--gray5-->
+    <color name="colorGray5">#505050</color>
+    <!--gray6-->
+    <color name="colorGray6">#141414</color>
+
+    <!--送礼记录 连送 礼物颜色-->
+    <color name="send_gift_lian_color">#99FF99</color>
+    <!--送礼记录 普通 礼物颜色-->
+    <color name="send_gift_color">#F88FC8</color>
+
+    <!--送礼记录 连送 x数字颜色-->
+    <color name="send_gift_lian_num">#FFDE28</color>
+    <!--送礼记录 连送 x数字颜色的阴影-->
+    <color name="send_gift_num_lian_shadow">#FF7C00</color>
+    <!--送礼记录  x数字颜色的阴影-->
+    <color name="send_gift_num_shadow">#ff010101</color>
+    <!--排行榜  1-->
+    <color name="rank1">#FED700</color>
+    <!--排行榜  3-->
+    <color name="rank3">#8FDEF8</color>
+
+    <!--排行榜 粉丝排行 分割线-->
+    <color name="guard_fans_rank_divider_color">#FCFCFC</color>
+
+    <!--直播间  进入直播间提示文字颜色-->
+    <color name="join_room_green_color">#ff00b916</color>
+
+
+    <!--直播间  礼物柜间隔线字颜色-->
+    <color name="gift_pan_divider_color">#66CCCCCC</color>
+    <!-- 关注背景颜色-->
+    <color name="concern_bg_color">#FFF88FC8</color>
+    <!-- 已关注背景颜色-->
+    <color name="have_concern_bg_color">#FFCCCCCC</color>
+    <!-- 背景色-->
+    <color name="cDDDDDD">#dddddd</color>
+
+
+    <color name="pri_msg_edit_color">#FFE3E3E3</color>
+
+    <color name="pri_msg_time_bg_color">#FFBEBEBE</color>
+    <!--开播 封面  地址  颜色-->
+    <color name="live_cover_location_color">#FFEDEDED</color>
+
+    <color name="main_room_yellow_color">#FFFFD855</color>
+    <color name="main_room_white_color">#FFE9FED7</color>
+    <color name="main_room_red_color">#FFFD7083</color>
+
+    <color name="scroll_gift_nick_color">#FFFFFE8C</color>
+</resources>

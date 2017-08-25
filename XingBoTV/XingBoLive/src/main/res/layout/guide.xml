@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    >
+    <android.support.v4.view.ViewPager
+        android:id="@+id/guide_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffFFFFFF"
+        />
+    <!--
+    <xingbobasebase.view.widget.CirclePageIndicator
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/gift_pager_indicator"
+        android:padding="3dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="#ffFFFFFF"
+        app:radius="3dp"
+        app:fillColor="#ffCECECE"
+        app:pageColor="#ff949494"
+        app:strokeColor="#00000000"
+        app:strokeWidth="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="0dp"
+        />-->
+</RelativeLayout>

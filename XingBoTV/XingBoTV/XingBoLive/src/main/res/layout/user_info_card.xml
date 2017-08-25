@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="310dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/xingbo_dialog_bg">
+
+    <ViewStub
+        android:id="@+id/loading_err_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/common_empty_list_view" />
+
+    <RelativeLayout
+        android:id="@+id/user_info_card_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/user_info_card_manage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp"
+            android:text="管理"
+            android:textColor="@color/pink"
+            android:textSize="15sp"
+            android:visibility="invisible" />
+
+        <com.xingbobase.view.FrescoImageView
+            android:id="@+id/user_info_card_avatar"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:src="@mipmap/avatar_placeholder"
+            android:textSize="14sp"
+            app:placeholderImage="@mipmap/avatar_placeholder"
+            app:roundAsCircle="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="73dp"
+            android:src="@mipmap/user_info_card_heart"
+            android:visibility="gone" />
+
+        <com.xingbobase.view.FrescoImageView
+            android:id="@+id/user_info_card_close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="70dp"
+            android:visibility="invisible"
+            app:actualImageScaleType="focusCrop"
+            app:placeholderImage="@mipmap/avatar_placeholder"
+            app:roundAsCircle="true" />
+
+        <LinearLayout
+            android:id="@+id/ll_user_info_card1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_info_card_close"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/user_info_card_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/user_info_card_sex"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/female" />
+
+            <ImageView
+                android:id="@+id/user_info_card_richlvl"
+                android:layout_width="55dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_user_info_card2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_user_info_card1"
+            android:layout_marginTop="15dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/user_info_card_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID:"
+                android:textColor="@color/c666666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/user_info_card_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/location"
+                android:paddingLeft="20dp"
+                android:text="未知"
+                android:textColor="@color/c666666"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/user_info_card_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_user_info_card2"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:maxHeight="43dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="他很懒，什么都没说。"
+            android:textColor="@color/title"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_user_info_card3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_info_card_desc"
+            android:layout_marginTop="25dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关注"
+                android:textColor="@color/c333333"
+                android:id="@+id/info_card_concern"
+                android:textSize="14sp"
+                android:paddingRight="12dp"/>
+
+            <TextView
+                android:id="@+id/user_info_card_favorate_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/c333333"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="35dp"
+                android:background="@color/grey_light"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:text="粉丝"
+                android:id="@+id/info_card_fans"
+                android:paddingRight="12dp"
+                android:textColor="@color/c333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/user_info_card_fans_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="0"
+                android:textColor="@color/c333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></LinearLayout>
+
+        <TextView
+            android:id="@+id/user_info_card_concern"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_below="@+id/ll_user_info_card3"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/user_info_card_concern"
+            android:button="@null"
+            android:gravity="center"
+            android:text="关注"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/uer_info_card_split"
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_below="@+id/user_info_card_concern"
+            android:layout_marginTop="18dp"
+            android:background="@color/grey_light" />
+
+        <LinearLayout
+            android:id="@+id/user_info_card_operation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/uer_info_card_split">
+
+            <TextView
+                android:id="@+id/user_info_card_report"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="举报"
+                android:textColor="@color/c333333"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey_light" />
+
+            <TextView
+                android:id="@+id/user_info_card_secret"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="私信"
+                android:textColor="@color/c333333"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="1dp"
+
+                android:layout_height="match_parent"
+                android:background="@color/grey_light" />
+
+            <TextView
+                android:id="@+id/user_info_card_reply"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="回复"
+                android:textColor="@color/c333333"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="1dp"
+
+
+                android:layout_height="match_parent"
+                android:background="@color/grey_light" />
+
+            <TextView
+                android:id="@+id/user_info_card_home"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="主页"
+                android:textColor="@color/c333333"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/user_card_close_img"
+            android:src="@mipmap/user_card_info_close"
+            android:layout_alignParentTop="true"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_centerVertical="true"
+        android:id="@+id/user_info_card_loading_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/user_info_card_loading"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:background="@anim/xingbo_loading" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_info_card_loading"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="正在加载中..."
+            android:textColor="@color/c333333"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+</RelativeLayout>

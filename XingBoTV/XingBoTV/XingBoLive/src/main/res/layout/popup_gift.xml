@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="310dp">
+    <com.xingbo.live.view.widget.PagerSlidingTabStrip
+        android:id="@+id/pagerSlidingTabStrip_gift"
+        android:layout_width="match_parent"
+        android:layout_height="260dp" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/popup_gift_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:layout_marginLeft="13dp"
+        android:textSize="15sp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/tv_popup_gift_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pagerSlidingTabStrip_gift"
+        android:text="充值：300星币" />
+
+    <ImageView
+        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/pagerSlidingTabStrip_gift"
+        android:layout_toRightOf="@+id/tv_popup_gift_balance"
+        android:src="@mipmap/next" />
+
+    <Button
+        android:layout_marginTop="6dp"
+        android:background="#f88fc8"
+        android:layout_below="@+id/pagerSlidingTabStrip_gift"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="13dp"
+        android:layout_width="75dp"
+        android:layout_height="35dp"
+        android:text="赠送" />
+
+    <com.xingbo.live.view.NumberTextView
+        android:layout_marginRight="113dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        />
+
+</RelativeLayout>

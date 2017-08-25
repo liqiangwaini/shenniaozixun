@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/nick_container"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/cffffff"
+        android:orientation="horizontal">
+
+        <!-- 头像-->
+        <com.xingbobase.view.FrescoImageView
+            android:id="@+id/header"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="7dp"
+            fresco:placeholderImage="@mipmap/avatar_placeholder"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:roundAsCircle="true"
+            fresco:roundingBorderColor="#FFFFFF"
+            fresco:roundingBorderWidth="1dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_toRightOf="@id/header"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nick"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="昵称"
+                android:textColor="@color/c333333"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/user_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="2dp"
+                    android:drawableLeft="@mipmap/user_addr_icon"
+                    android:drawablePadding="2dp"
+                    android:gravity="center|left"
+                    android:singleLine="true"
+                    android:text="火星"
+                    android:textColor="@color/black_787878"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/online_count_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="1dp"
+                    android:layout_toLeftOf="@+id/text_t"
+                    android:text="10000"
+                    android:textColor="@color/colorText3"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/text_t"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="2dp"
+                    android:paddingRight="12dp"
+                    android:text="在观看"
+                    android:textColor="@color/c666666"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/anchor_list_live"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_below="@+id/nick_container">
+        <!--封面图-->
+        <com.xingbobase.view.FrescoImageView
+            xmlns:fresco="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/anchor_pic"
+            android:layout_width="match_parent"
+            android:layout_height="375dp"
+            fresco:actualImageScaleType="centerCrop"
+            android:background="@color/cEEEEEE"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:roundAsCircle="false"
+            fresco:roundBottomLeft="false"
+            fresco:roundBottomRight="false"
+            fresco:roundedCornerRadius="2dp"
+            fresco:roundingBorderColor="#FFFFFF" />
+
+        <ImageView
+            android:id="@+id/live_state_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/live_state_coming_icon" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/user_title"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/anchor_list_live"
+        android:background="@color/cffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="# 闲聊时光，下午陪你聊聊天"
+        android:textColor="@color/c666666"
+        android:textSize="15sp" />
+
+
+</RelativeLayout>

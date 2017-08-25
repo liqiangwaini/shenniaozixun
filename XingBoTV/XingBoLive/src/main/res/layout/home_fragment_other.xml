@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+    <com.xingbobase.extra.pulltorefresh.PullToRefreshGridView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/common_anchor_grid_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:background="@color/base_bg"
+        android:stretchMode="columnWidth"
+        android:listSelector="#00000000"
+        ptr:ptrDrawable="@drawable/default_ptr_rotate"
+        android:scrollbars="none"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        />
+    <ViewStub
+        android:id="@+id/loading_err_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/common_empty_list_view"
+        />
+</RelativeLayout>

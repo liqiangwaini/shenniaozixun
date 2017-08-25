@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AlivcLiveRecord-release1.0.0/AlivcLiveRecord-release1.0.0.iml" filepath="$PROJECT_DIR$/AlivcLiveRecord-release1.0.0/AlivcLiveRecord-release1.0.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CommonXingbo/CommonXingbo.iml" filepath="$PROJECT_DIR$/CommonXingbo/CommonXingbo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PushSDK/PushSDK.iml" filepath="$PROJECT_DIR$/PushSDK/PushSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Umeng/Umeng.iml" filepath="$PROJECT_DIR$/Umeng/Umeng.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XingBoLive/XingBoLive.iml" filepath="$PROJECT_DIR$/XingBoLive/XingBoLive.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XingBoTV.iml" filepath="$PROJECT_DIR$/XingBoTV.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vitamio/vitamio.iml" filepath="$PROJECT_DIR$/vitamio/vitamio.iml" />
+    </modules>
+  </component>
+</project>

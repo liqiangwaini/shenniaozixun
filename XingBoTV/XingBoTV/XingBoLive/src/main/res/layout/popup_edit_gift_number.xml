@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/edit_send_gift_number"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.85"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="8dp">
+
+    <EditText
+        android:maxEms="999999"
+        android:inputType="number"
+        android:id="@+id/et_edit_gift_number"
+        android:layout_width="265dp"
+        android:layout_height="33dp"
+        android:background="@drawable/edit_gift_number_bg"
+        android:hint="输入赠送数量(最小为1)，最多可赠送99999"
+        android:paddingLeft="5dp"
+        android:textColorHint="@color/colorTextG1"
+        android:textSize="12sp" />
+
+    <Button
+        android:textSize="15sp"
+        android:textColor="@color/ceeeeee"
+        android:id="@+id/btn_edit_gift_number"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:layout_marginLeft="12dp"
+        android:background="@drawable/send_gift_btn_bg"
+        android:text="确定" />
+
+</LinearLayout>

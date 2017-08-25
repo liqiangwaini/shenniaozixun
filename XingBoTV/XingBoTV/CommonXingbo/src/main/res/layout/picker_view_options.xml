@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4D000000"
+    android:orientation="vertical"
+    android:id="@+id/root"
+    >
+    <com.xingbobase.view.XingBoRelativeLayout
+        android:id="@+id/options_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnSubmit"
+        android:visibility="visible"
+        >
+        <include
+            android:id="@+id/optionspicker"
+            layout="@layout/picker_view_optionspicker" />
+        <View
+            android:layout_alignTop="@id/optionspicker"
+            android:layout_alignBottom="@id/optionspicker"
+            android:background="@drawable/picker_view_bg_above_timepicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.xingbobase.view.XingBoRelativeLayout>
+    <Button
+        android:id="@+id/btnSubmit"
+        android:background="#00FE719C"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:text="完成" />
+</RelativeLayout>

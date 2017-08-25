@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cEEEEEE"
+     >
+    <com.xingbobase.extra.pulltorefresh.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/common_anchor_list_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:fadingEdge="none"
+        android:divider="@color/cEEEEEE"
+        android:dividerHeight="10px"
+        android:fastScrollEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true"
+        ptr:ptrMode="pullFromStart"
+        ptr:ptrDrawable="@mipmap/common_loading_icon"
+        android:scrollbars="none"
+        />
+    <ViewStub
+        android:id="@+id/loading_err_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/common_empty_list_view"
+        />
+</RelativeLayout>

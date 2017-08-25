@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/empty_view_box"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    android:background="@color/cEEEEEE"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+        <com.xingbobase.view.FrescoImageView
+            android:id="@+id/empty_view_bg_icon"
+            xmlns:fresco="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            fresco:actualImageScaleType="centerInside"
+            fresco:roundAsCircle="false"
+            />
+        <TextView
+            android:id="@+id/empty_view_err_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123"
+            android:textColor="#999999"
+            android:textSize="15sp"
+            android:layout_below="@+id/empty_view_bg_icon"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            />
+        <Button
+            android:id="@+id/empty_view_refresh_btn"
+            android:layout_width="110dp"
+            android:layout_height="33dp"
+            android:text="去看看热门直播"
+            android:background="@drawable/phone_binding_sendcode"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:layout_below="@+id/empty_view_err_msg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            />
+    </RelativeLayout>
+</RelativeLayout>

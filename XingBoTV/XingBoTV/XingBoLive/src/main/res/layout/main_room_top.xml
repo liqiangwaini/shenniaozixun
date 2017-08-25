@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/main_room_hasconcerned"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/white_circle" />
+
+    <com.xingbobase.view.FrescoImageView
+        android:id="@+id/civ_anchor_avator"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:scaleType="fitXY"
+        app:placeholderImage="@mipmap/avatar_placeholder"
+        app:roundAsCircle="true" />
+
+    <TextView
+        android:id="@+id/tv_anchor_nick"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@id/civ_anchor_avator"
+        android:singleLine="true"
+        android:text="吆吆吆吆吆"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_anchor_fansnum"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_anchor_nick"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/civ_anchor_avator"
+        android:singleLine="true"
+        android:text="50520人"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_anchor_concern"
+        android:layout_width="35dp"
+        android:layout_height="22dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/tv_anchor_nick"
+        android:background="@drawable/concern_main_room_bg"
+        android:gravity="center"
+        android:text="关注"
+        android:textSize="13sp"
+        android:visibility="visible" />
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cEEEEEE">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/cffffff"
+        android:id="@+id/user_photos_head"
+        >
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:id="@+id/user_photos_top_back"
+            android:background="@null"
+            android:src="@mipmap/back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/user_photos_upload"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text="上传照片"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:layout_marginRight="10dp"/>
+    </RelativeLayout>
+
+    <com.xingbobase.extra.pulltorefresh.PullToRefreshStickyHeaderGridView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        ptr:ptrMode="both"
+        ptr:ptrDrawable="@mipmap/common_loading_icon"
+        android:layout_below="@id/user_photos_head"
+        android:background="@color/cEEEEEE"
+        android:scrollbars="none"
+        android:id="@+id/gridview"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:clipToPadding="false"
+        android:numColumns="4"
+          />
+
+    <ViewStub
+        android:id="@+id/loading_err_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/common_empty_list_view"
+        android:layout_below="@+id/user_photos_head"
+        />
+
+
+
+</RelativeLayout>

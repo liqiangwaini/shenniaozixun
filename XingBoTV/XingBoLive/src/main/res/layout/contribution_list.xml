@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/cffffff"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_contribution_list_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        >
+
+        <FrameLayout
+            android:id="@+id/top_back_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent">
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/back"/>
+        </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="排行榜"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+
+    <com.xingbobase.extra.pulltorefresh.PullToRefreshListView
+        android:layout_marginTop="40dp"
+        android:id="@+id/lv_contribution_list_fans"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/ceeeeee"
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:cacheColorHint="#00000000"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true"
+        ptr:ptrMode="both"
+        ptr:ptrDrawable="@mipmap/common_loading_icon"
+        android:scrollbars="none"
+        android:showDividers="middle"
+        android:layout_below="@+id/top_bar"
+        android:listSelector="#00000000"
+        android:dividerPadding="1dp"/>
+
+</RelativeLayout>

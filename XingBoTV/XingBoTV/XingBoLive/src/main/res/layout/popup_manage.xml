@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--\n管理员可对其他用户禁言-->
+    <TextView
+        android:id="@+id/tv_popup_manage_addadmin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="设置为管理员"
+        android:textColor="@color/c333333"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorTextG1" />
+
+    <TextView
+        android:id="@+id/tv_popup_manage_gag_thistime"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="禁    言"
+        android:textColor="@color/c333333"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorTextG1" />
+
+    <TextView
+        android:id="@+id/tv_popup_manage_gag_forever"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="永久禁言"
+        android:textColor="@color/c333333"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorTextG1"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_popup_manage_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="取    消"
+        android:textColor="@color/c333333"
+        android:textSize="15sp" />
+
+</LinearLayout>

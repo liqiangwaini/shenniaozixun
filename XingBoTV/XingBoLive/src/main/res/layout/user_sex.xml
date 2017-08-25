@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    >
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/cffffff"
+        android:layout_alignParentTop="true"
+        >
+        <ImageButton
+            android:id="@+id/top_back_btn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@mipmap/back"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:background="@null"
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp"
+            />
+        <TextView
+            android:id="@+id/top_model_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="修改性别"
+            android:textColor="@color/c333333"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/top_back_btn"
+            android:layout_toLeftOf="@+id/submit"
+            />
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:text="保存"
+            android:textColor="@color/c333333"
+            android:textSize="12sp"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+
+    <RadioGroup
+        android:id="@+id/sex_radio"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="right"
+        android:inputType="text"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@color/white"
+            android:button="@null"
+            android:drawablePadding="20dp"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:text="男"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:button="@null"
+            android:drawablePadding="20dp"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:text="女"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:textSize="20dp" />
+
+
+    </RadioGroup>
+</RelativeLayout>

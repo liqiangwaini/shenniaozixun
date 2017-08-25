@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/close_live_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="127dp"
+        android:gravity="center"
+        android:text="直播结束"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/close_live_visitors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/close_live_tag"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="0人观看"
+        android:textColor="@color/pink"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/close_live_profits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/close_live_visitors"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="收获0星币"
+        android:textColor="@color/pink"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/close_live_back"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="115dp"
+        android:background="@drawable/live_cover_startlive_bg"
+        android:gravity="center"
+        android:text="返回首页"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+</RelativeLayout>

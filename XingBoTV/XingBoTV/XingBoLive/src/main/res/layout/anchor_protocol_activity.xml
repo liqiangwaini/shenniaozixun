@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cEEEEEE">
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/cffffff"
+        android:layout_alignParentTop="true"
+        >
+        <ImageButton
+            android:id="@+id/top_back_btn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@mipmap/back"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:background="@null"
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp"
+            />
+        <TextView
+            android:id="@+id/top_model_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="星播手机直播管理条例"
+            android:textColor="@color/c333333"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/top_back_btn"
+            android:paddingRight="45dp"
+            />
+    </RelativeLayout>
+    <com.xingbobase.view.ProgressWebView
+        android:id="@+id/about_web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_bar"
+        android:layout_marginTop="5dp"
+        android:scrollbars="none"></com.xingbobase.view.ProgressWebView>
+
+</RelativeLayout>

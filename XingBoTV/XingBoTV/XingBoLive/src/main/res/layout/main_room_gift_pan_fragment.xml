@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xingbobase.view.widget.CirclePageIndicator xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/gift_pager_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="3dp"
+        app:fillColor="@color/pink"
+        app:pageColor="@color/grey_light"
+        app:radius="4dp"
+        app:strokeColor="#00000000"
+        app:strokeWidth="0dp" />
+
+    <android.support.v4.view.ViewPager
+        android:layout_marginTop="5dp"
+        android:id="@+id/gift_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/gift_pager_indicator" />
+</RelativeLayout>

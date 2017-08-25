@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+    <TextView
+        android:shadowColor="@color/textcolor_shadow"
+        android:shadowDy="2"
+        android:shadowDx="2"
+        android:shadowRadius="2"
+        android:id="@+id/tv_item_room_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sssssss"
+        android:textColor="@color/message_textcolor"
+        android:textSize="17sp"
+        android:textStyle="normal"
+        />
+</LinearLayout>

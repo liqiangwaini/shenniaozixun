@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/cffffff">
+
+        <com.xingbobase.view.FrescoImageView
+            android:id="@+id/item_main_room_pri_msg_avatar"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@mipmap/avatar_placeholder"
+            app:actualImageScaleType="focusCrop"
+            app:placeholderImage="@mipmap/avatar_placeholder"
+            app:roundAsCircle="true" />
+
+        <ImageView
+            android:id="@+id/item_main_room_pri_msg_redpoint"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignRight="@+id/item_main_room_pri_msg_avatar"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/private_message_count_bg" />
+
+        <TextView
+            android:id="@+id/item_main_room_pri_msg_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/item_main_room_pri_msg_avatar"
+            android:text="宋仲基的宋"
+            android:textColor="@color/c333333"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_marginRight="12dp"
+            android:singleLine="true"
+            android:id="@+id/item_main_room_pri_msg_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/item_secret_notify_nick"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/item_main_room_pri_msg_avatar"
+            android:text="你好啊  阿尼哈谁有你好啊  阿尼哈谁有你好啊  阿尼哈谁有你好啊  阿尼哈谁有"
+            android:textColor="@color/c666666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/item_main_room_pri_msg_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="10dp"
+            android:text="6月21日 14：41"
+            android:textColor="@color/c666666"
+            android:textSize="14sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/cEEEEEE" />
+    </RelativeLayout>
+</RelativeLayout>

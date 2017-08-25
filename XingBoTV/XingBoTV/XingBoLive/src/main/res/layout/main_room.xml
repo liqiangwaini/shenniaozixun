@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_room"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.xingbobase.view.FrescoImageView
+                android:id="@+id/room_loading_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:visibility="visible" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_videoview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <io.vov.vitamio.widget.VideoView
+            android:id="@+id/room_videoview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <!-- videoView 上面一层  聊天显示礼物送出-->
+    <RelativeLayout
+        android:id="@+id/rl_up_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <RelativeLayout
+            android:id="@+id/main_room_anchor_info"
+            android:layout_width="165dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/main_room_hasconcerned">
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/white_circle" />
+
+            <com.xingbobase.view.FrescoImageView
+                android:id="@+id/civ_anchor_avator"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:scaleType="fitXY"
+                app:placeholderImage="@mipmap/avatar_placeholder"
+                app:roundAsCircle="true" />
+
+            <TextView
+                android:id="@+id/tv_anchor_nick"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/civ_anchor_avator"
+                android:singleLine="true"
+                android:text="吆吆吆吆吆"
+                android:textColor="@color/cffffff"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_anchor_fansnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_anchor_nick"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/civ_anchor_avator"
+                android:singleLine="true"
+                android:text="50520"
+                android:textColor="@color/cffffff"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_anchor_nick"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/tv_anchor_fansnum"
+                android:singleLine="true"
+                android:text="人"
+                android:textColor="@color/cffffff"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_anchor_concern"
+                android:layout_width="35dp"
+                android:layout_height="22dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_anchor_nick"
+                android:background="@drawable/concern_main_room_bg"
+                android:gravity="center"
+                android:text="关注"
+                android:textSize="13sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_fans"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/main_room_anchor_info"
+            android:fadingEdge="none" />
+
+        <ImageView
+            android:id="@+id/iv_main_room_cancel"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="19dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/close_main_room" />
+
+        <TextView
+            android:id="@+id/main_room_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_below="@+id/main_room_anchor_info"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/main_room_rich_bg"
+            android:drawablePadding="5dp"
+            android:drawableRight="@mipmap/next_main_room"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:text="星币数：0222225"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <com.xingbo.live.view.ScrollGift
+            android:id="@+id/main_room_scroll_gift"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_marginTop="100dp" />
+
+
+        <master.flame.danmaku.ui.widget.DanmakuView
+            android:id="@+id/main_room_danmu"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_above="@+id/room_listview"
+            android:layout_marginBottom="10dp" />
+
+        <com.xingbo.live.view.ShowGift
+            android:id="@+id/showGift"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_above="@+id/main_room_danmu"></com.xingbo.live.view.ShowGift>
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/iv_message"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginLeft="12dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/main_room_chat_selector" />
+
+            <ImageView
+                android:id="@+id/iv_share"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_message"
+                android:src="@drawable/main_room_share_selector" />
+
+            <FrameLayout
+                android:id="@+id/rl_pri_message"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_share">
+
+                <ImageView
+                    android:id="@+id/iv_pri_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/main_room_primsg_selector" />
+
+                <TextView
+                    android:id="@+id/iv_pri_message_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_room_pri_message_count_bg"
+                    android:gravity="center"
+                    android:text="1"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/iv_groupchat"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/rl_pri_message"
+                android:src="@drawable/main_room_connnect_selector"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_gift"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_groupchat"
+                android:src="@drawable/gift_main_room_selector" />
+
+            <ImageView
+                android:id="@+id/iv_close_psrh_live"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_gift"
+                android:src="@drawable/main_room_close_push_live_bg" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_inputbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+
+            <com.xingbo.live.view.InputBarWithBoard
+                android:id="@+id/input_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:visibility="visible" />
+
+            <View
+                android:id="@+id/blank_inputbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/input_bar" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/room_listview"
+            android:layout_width="match_parent"
+            android:layout_height="116dp"
+            android:layout_above="@+id/rl_bottom"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="60dp"
+            android:background="@color/transparent"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:listSelector="@color/transparent"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:scrollbars="none"
+            android:stackFromBottom="true" />
+
+        <RelativeLayout
+            android:id="@+id/rl_edit_gift_number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+
+            <include
+                android:id="@+id/include_edit_gift_number"
+                layout="@layout/popup_edit_gift_number"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true" />
+
+            <View
+                android:id="@+id/edit_gift_number_blank"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/include_edit_gift_number" />
+        </RelativeLayout>
+        <!-- 私信-->
+        <RelativeLayout
+            android:id="@+id/rl_pri_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+
+            <include
+                android:id="@+id/include_pri_msg"
+                layout="@layout/main_room_pri_msg"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_alignParentBottom="true" />
+
+            <View
+                android:id="@+id/pri_msg_blank"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/include_pri_msg" />
+        </RelativeLayout>
+        <!-- 私信详情-->
+        <RelativeLayout
+            android:id="@+id/rl_pri_msg_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+
+            <include
+                android:id="@+id/include_pri_msg_detail"
+                layout="@layout/main_room_pri_msg_detail"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_alignParentBottom="true" />
+
+            <View
+                android:id="@+id/pri_msg_blank_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/include_pri_msg_detail" />
+        </RelativeLayout>
+
+        <!-- 礼物面板-->
+        <RelativeLayout
+            android:id="@+id/gift_pan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+
+            <include
+                android:id="@+id/include_gift_pan"
+                layout="@layout/main_room_gift_pan"
+                android:layout_width="match_parent"
+                android:layout_height="310dp"
+                android:layout_alignParentBottom="true" />
+
+            <View
+                android:id="@+id/gift_pan_blank"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/include_gift_pan" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:background="@color/black"
+            android:id="@+id/room_slide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.6">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="42dp"
+                android:layout_marginTop="155dp"
+                android:src="@mipmap/slide_left_right" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="275dp"
+                android:layout_marginLeft="42dp"
+                android:src="@mipmap/slide_up_down" />
+
+            <TextView
+                android:id="@+id/room_slide_i_see"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="180dp"
+                android:background="@drawable/slide_bg"
+                android:gravity="center"
+                android:text="我知道了"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

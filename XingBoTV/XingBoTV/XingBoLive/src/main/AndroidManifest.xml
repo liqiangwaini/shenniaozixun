@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xingbo.live">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CAPTURE_VIDEO_OUTPUT" />
+
+
+    <application
+        android:name=".SystemApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:replace="allowBackup">
+        <activity
+            android:name=".ui.Guide"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".ui.WelcomeAct"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.xingbo"
+                    android:pathPrefix="/start"
+                    android:scheme="scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.LoginAct"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".ui.LoginLocalAct"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name=".ui.RegisterAct"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".ui.CompleteInfoAct"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".ui.ResetPwd"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".ui.SetNewPwd"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 首页活动轮播图-跳转页面 -->
+        <activity
+            android:name=".ui.IndexActWeb"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 微信登录分享回调界面 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 新浪登录分享回调界面 -->
+        <activity
+            android:name=".WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" >
+        </activity>
+        <!-- 监听网络 -->
+        <receiver android:name=".broadcast.InternetStateBroadcast">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".ui.HomeActivity" />
+        <activity
+            android:launchMode="singleTask"
+            android:name=".ui.MainRoom"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+
+        <activity
+            android:name=".ui.UserAct"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"></activity>
+        <!--图片编辑-->
+        <activity
+            android:name=".ui.PictureEditAct"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 图片选择-->
+        <activity
+            android:name=".ui.PictureSelectMoreAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!--个人信息编辑-->
+        <activity
+            android:name=".ui.UserBaseInfoAct"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!--个人昵称编辑-->
+        <!-- 个人昵称编辑 -->
+        <activity
+            android:name=".ui.UserNickAct"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!--个人说明编辑-->
+        <!-- 个人说明编辑 -->
+        <activity
+            android:name=".ui.UserIntroAct"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!--个人关注-->
+        <!-- 个人关注 -->
+        <activity
+            android:name=".ui.UserFavoriteAct"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!--个人粉丝-->
+        <!-- 个人粉丝 -->
+        <activity
+            android:name=".ui.UserFansAct"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 个人信息-->
+        <activity
+            android:name=".ui.UserMsgAct"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!--个人生日修改-->
+
+        <!-- 个人sex修改 -->
+        <activity
+            android:name=".ui.UserSexAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!--个人sex修改-->
+        <!--个人账户-->
+        <activity android:name=".ui.UserAccountAct" />
+        <!--个人收益-->
+        <activity android:name=".ui.UserIncomeAct"></activity>
+        <!--应用设置-->
+        <activity
+            android:name=".ui.SettingAct"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!--关于直播-->
+        <activity
+            android:name=".ui.AboutWeb"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!--意见反馈-->
+        <activity
+            android:name=".ui.FeedBack"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!--个人生日修改-->
+        <activity
+            android:name=".ui.UserBirthAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ui.GuardAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!--个人收益-->
+        <activity
+            android:name=".ui.UserIncomeListAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!--充值-->
+        <activity
+            android:name=".ui.RechargeAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!--充值记录列表-->
+        <activity
+            android:name=".ui.UserPayLogAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!--消费记录列表-->
+        <activity
+            android:name=".ui.UserSendLogAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 粉丝贡献榜单列表-->
+        <activity
+            android:name=".ui.UserFansContributeAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- 个人相册列表-->
+        <activity
+            android:name=".ui.UserPhotosAct"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 照片删除页面-->
+        <activity
+            android:name=".ui.PhotosDeleteAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- 私信详情-->
+        <activity
+            android:name=".ui.UserMsgPriDetailAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.MultiImageSelectorActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <!-- 个人主页-->
+        <activity
+            android:name=".ui.UserHomepageAct"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 手机绑定页面-->
+        <activity
+            android:name=".ui.UserPhoneBindingAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 直播结束页面-->
+        <activity
+            android:name=".ui.LiveFinishedAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- 主播搜寻页面-->
+        <activity
+            android:name=".ui.HomeSearchAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- 开始直播封面-->
+        <activity
+            android:name=".ui.StartLiveCoverAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 申请成为主播页面-->
+        <activity
+            android:name=".ui.ApplyTobeAnchorAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- 消息提醒推送-->
+        <activity
+            android:name=".ui.UserPushAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- 主播直播页面-->
+        <activity
+            android:name=".ui.AnchorLiveAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- 主播直播结束页面-->
+        <activity
+            android:name=".ui.CloseLiveAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- notifcation 页面-->
+        <activity
+            android:name=".ui.NotifycationAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <service android:name=".service.UpdateService" />
+        <!-- 相册查看页面-->
+        <activity
+            android:name=".ui.PicturesShowAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 用户协议页面-->
+        <activity
+            android:name=".ui.UserProtocolAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 手机直播管理协议页面-->
+        <activity
+            android:name=".ui.AnchorProtocolAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 头像预览页面-->
+        <activity
+            android:name=".ui.UserAvatarPreviewAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 头像更换页面-->
+        <activity
+            android:name=".ui.UserAvatarChangeAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!-- 用户相册预览页面-->
+        <activity android:name=".ui.PhotosSaveAct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+    </application>
+    
+</manifest>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gift_pan_top_bar"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/gift_btn_bar_common"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="普通"
+            android:textColor="@drawable/gift_pan_titlebar_text"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:visibility="gone"
+            android:id="@+id/gift_btn_bar_luck"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableBottom="@drawable/gift_pan_pink_line"
+            android:gravity="center"
+            android:text="幸运"
+            android:textColor="@drawable/gift_pan_titlebar_text"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/gift_btn_bar_advanced"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="豪华"
+            android:textColor="@drawable/gift_pan_titlebar_text"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/gift_btn_bar_exclusive"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="专属"
+            android:textColor="@drawable/gift_pan_titlebar_text"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/gift_btn_bar_bag"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="包裹"
+            android:textColor="@drawable/gift_pan_titlebar_text"
+            android:textSize="15sp" />
+    </RadioGroup>
+</LinearLayout>

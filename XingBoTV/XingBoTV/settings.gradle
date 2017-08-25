@@ -1,0 +1,1 @@
+include ':XingBoLive', ':CommonXingbo', ':Umeng', ':PushSDK', ':vitamio', ':AlivcLiveRecord-release1.0.0'

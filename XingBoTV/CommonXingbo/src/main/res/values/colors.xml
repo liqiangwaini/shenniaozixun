@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="translucent_background">#00000000</color>
+    <color name="white">#ffFFFFFF</color>
+    <color name="black">#ff000000</color>
+    <color name="gray_989898">#ff989898</color>
+    <color name="base_bg">#fff1f1f1</color>
+    <color name="base_bg_white">#fff1f1f1</color>
+    <!--背景白-->
+    <color name="cffffff">#ffffff</color>
+    <color name="ceeeeee">#EEEEEE</color>
+    <color name="topBarBg_303030">#ff303030</color>
+
+    <color name="first_text_525252">#ff525252</color>
+    <color name="first_text_424242">#ff424242</color>
+    <color name="second_text_AEAEAE">#ffAEAEAE</color>
+
+    <color name="orange_FF582B">#ffFF582B</color>
+    <color name="orange_FC563C">#ffFF582B</color>
+
+    <color name="list_divider_D2D2D2">#ffececec</color>
+    <color name="gray_border_E5E5E5">#ffE5E5E5</color>
+
+    <color name="cyan_346182">#ff346182</color>
+
+    <color name="px_loading_dialog_bg">#5C000000</color>
+
+    <!--PagerSlidingTabStrip菜单项松开、按下状态颜色-->
+    <color name="PagerSlidingTabStrip_tab_bg">#FEFEFE</color>
+    <!--背景色-->
+    <color name="c98EBF9">#98EBF9</color>
+
+    <!--底色-->
+    <color name="cEEEEEE">#EEEEEE</color>
+
+</resources>

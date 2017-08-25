@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xingbobase.view.FrescoImageView
+        android:alpha="0.8"
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        fresco:actualImageScaleType="centerCrop"
+        android:scaleType="fitXY"
+        fresco:roundAsCircle="false"
+        android:id="@+id/live_finished_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black" />
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/tv_live_finish_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="125dp"
+        android:text="直播结束"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/live_finished_guests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_live_finish_tag"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="0人观看"
+        android:textColor="@color/white"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/live_finished_back"
+        android:background="@drawable/live_finished_bg"
+        android:gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="115dp"
+        android:text="返回首页"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+    <TextView
+        android:gravity="center"
+        android:layout_marginBottom="25dp"
+        android:id="@+id/live_finished_homepage"
+        android:layout_marginLeft="37dp"
+        android:layout_above="@+id/live_finished_back"
+        android:background="@drawable/live_finished_bg"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:text="访问TA的主页"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/live_finished_concern"
+        android:gravity="center"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/live_finished_homepage"
+        android:layout_above="@+id/live_finished_back"
+        android:background="@drawable/live_finished_bg"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:text="+关注"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+</RelativeLayout>

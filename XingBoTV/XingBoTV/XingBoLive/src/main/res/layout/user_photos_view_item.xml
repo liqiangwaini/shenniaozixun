@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp" >
+    <TextView
+        android:id="@+id/user_photos_upload_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上传时间:"
+        />
+    <TextView
+        android:id="@+id/user_photos_upload_ctime"
+        android:layout_toRightOf="@id/user_photos_upload_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="ctime"/>
+    <com.xingbobase.extra.pulltorefresh.PullToRefreshGridView
+        android:id="@+id/user_photos_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.xingbobase.extra.pulltorefresh.PullToRefreshGridView>
+    <LinearLayout
+        android:id="@+id/user_photos_linearlayout"
+        android:layout_below="@id/user_photos_upload_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    </LinearLayout>
+
+
+</RelativeLayout>

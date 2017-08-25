@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cEEEEEE">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_main_room_system_msg"
+        android:background="@color/cffffff">
+        <com.xingbobase.view.FrescoImageView
+            android:id="@+id/item_main_room_sys_msg_avator"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/avatar_placeholder"
+            app:placeholderImage="@mipmap/system_msg_icon" />
+
+        <TextView
+            android:id="@+id/item_main_room_sys_msg_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/item_main_room_sys_msg_avator"
+            android:text="系统通知"
+            android:textColor="@color/c666666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/item_main_room_sys_msg_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_main_room_sys_msg_title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/item_main_room_sys_msg_avator"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="user_system_comtenuser_system_comtentuser_system_comtentuser_system_comtentuser_system_comtentt" />
+
+        <TextView
+            android:id="@+id/item_main_room_sys_msg_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="10dp"
+            android:text="时间ctime"
+            android:textColor="@color/c666666"
+            android:textSize="14sp" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/cEEEEEE"
+        android:layout_below="@+id/rl_main_room_system_msg"/>
+
+
+
+</RelativeLayout>

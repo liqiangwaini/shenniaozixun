@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_marginTop="3dp">
+
+        <com.xingbobase.view.FrescoImageView
+            android:id="@+id/gift_item_icon"
+            android:layout_width="47.5dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/gift_item_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/avatar"
+            fresco:actualImageScaleType="fitCenter"
+            fresco:roundAsCircle="false" />
+
+        <TextView
+            android:id="@+id/gift_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_above="@+id/gift_item_price"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#424242"
+            android:textSize="10sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/gift_item_price"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/colorTextG1"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/gift_item_lucky"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            android:src="@mipmap/lucky_gift" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/gift_item_action"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/gift_item_lucky"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            android:src="@mipmap/action_gift" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/gift_item_week"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/gift_item_action"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            android:src="@mipmap/week_gift" />
+    </RelativeLayout>
+
+    <com.xingbobase.view.FrescoImageView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/item_cover"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/gift_selected"
+        android:visibility="gone"
+        fresco:roundAsCircle="false" />
+
+    <com.xingbobase.view.FrescoImageView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/item_gift_luck"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:roundAsCircle="false" />
+
+</RelativeLayout>

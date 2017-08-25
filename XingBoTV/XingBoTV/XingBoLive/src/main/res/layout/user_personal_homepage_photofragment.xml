@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xingbobase.extra.pulltorefresh.PullToRefreshStickyHeaderGridView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cffffff"
+        android:clipToPadding="false"
+        android:numColumns="3"
+        android:scrollbars="none"
+        ptr:ptrDrawable="@mipmap/common_loading_icon"
+        ptr:ptrMode="both" />
+
+    <ViewStub
+        android:id="@+id/loading_err_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/common_empty_list_view" />
+
+
+</RelativeLayout>

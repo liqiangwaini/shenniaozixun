@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="10dp"
+   >
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_marginTop="37dp">
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:id="@+id/open_guard_cancel"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/close_main_room" />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/tv_open_guard_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="115dp"
+            android:text="董小梦、黄埔军校"
+            android:textColor="@color/c333333"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_buy_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="55dp"
+            android:text="购买时长"
+            android:textColor="@color/c333333"
+            android:textSize="15sp" />
+
+        <RadioGroup
+            android:orientation="horizontal"
+            android:id="@+id/ll_open_guard"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/tv_buy_type"
+            android:layout_marginTop="10dp">
+
+            <RadioButton
+                android:checked="true"
+                android:gravity="center"
+                android:id="@+id/open_guard_normal_month"
+                android:layout_width="72dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/guard_type_bg_selector"
+                android:button="@null"
+                android:text="普月"
+                android:textColor="@drawable/guard_type_text_selector"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:gravity="center"
+                android:id="@+id/open_guard_normal_season"
+                android:layout_width="72dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/guard_type_bg_selector"
+                android:button="@null"
+                android:text="普季"
+                android:textColor="@drawable/guard_type_text_selector"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:gravity="center"
+                android:id="@+id/open_guard_gold_month"
+                android:layout_width="72dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/guard_type_bg_selector"
+                android:button="@null"
+                android:text="金月"
+                android:textColor="@drawable/guard_type_text_selector"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:gravity="center"
+                android:id="@+id/open_guard_gold_season"
+                android:layout_width="72dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/guard_type_bg_selector"
+                android:button="@null"
+                android:text="金季"
+                android:textColor="@drawable/guard_type_text_selector"
+                android:textSize="14sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/open_guard_lastcoin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_open_guard"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="金额："
+            android:textSize="13sp" />
+        <TextView
+            android:layout_toRightOf="@+id/open_guard_lastcoin"
+            android:id="@+id/open_guard_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_open_guard"
+            android:layout_marginTop="15dp"
+            android:text="5.0万星币"
+            android:textSize="13sp" />
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/open_guard_coin_not_enough"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_open_guard"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/open_guard_coin"
+            android:text="(余额不足)"
+            android:textColor="@color/message_textcolor"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/open_guard_lastdate_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/open_guard_coin"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:text="有效期至："
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/open_guard_lastdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/open_guard_coin"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/open_guard_lastdate_tag"
+            android:text="2016-03-15"
+            android:textColor="@color/message_textcolor"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_open_guard_special"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/open_guard_lastdate_tag"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="守护特权"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_open_guard_special_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_open_guard_special"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:src="@mipmap/guard_medal" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:src="@mipmap/guard_seat" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:src="@mipmap/guard_emotion" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:src="@mipmap/guard_gift" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/guard_privilege_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_open_guard_special_icon"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:textSize="10sp"
+                android:textColor="@color/c333333"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="专属勋章" />
+
+            <TextView
+                android:textSize="10sp"
+                android:textColor="@color/c333333"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="专属坐席" />
+
+            <TextView
+                android:textSize="10sp"
+                android:textColor="@color/c333333"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="专属表情" />
+
+            <TextView
+                android:textSize="10sp"
+                android:textColor="@color/c333333"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="专属礼物" />
+        </LinearLayout>
+
+        <Button
+            android:layout_below="@+id/guard_privilege_text"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/button_open_guard"
+            android:layout_width="300dp"
+            android:layout_height="44dp"
+            android:background="@drawable/guard_open_selector"
+            android:text="开通"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <com.xingbobase.view.FrescoImageView
+        android:background="@drawable/white_circle"
+        android:padding="2dp"
+        android:id="@+id/open_guard_avatar"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="3dp"
+        app:placeholderImage="@mipmap/avatar"
+        app:roundAsCircle="true" />
+
+</FrameLayout>

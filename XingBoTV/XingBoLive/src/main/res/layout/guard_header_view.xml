@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/split1"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/ceeeeee" />
+
+    <LinearLayout
+        android:layout_below="@+id/split1"
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tv_anchor_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:text="不服你咬我啊的守护神 "
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tv_guard_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_anchor_nick"
+            android:gravity="bottom"
+            android:text="(0)"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/frame"
+        android:background="@color/ceeeeee" />
+    <RelativeLayout
+        android:layout_marginLeft="30dp"
+        android:id="@+id/rl_guard_snap"
+        android:layout_below="@+id/frame"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp">
+        <com.xingbobase.view.FrescoImageView
+            android:layout_marginTop="10dp"
+            android:id="@+id/fiv_guard_snap"
+            android:background="@mipmap/snap_guard"
+            app:roundAsCircle="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:gravity="center_vertical"
+            android:textColor="@color/pink"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="7dp"
+            android:layout_below="@+id/fiv_guard_snap"
+            android:textSize="12sp"
+            android:text="开通守护"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_toRightOf="@+id/rl_guard_snap"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/rv_contribution_list_guard"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_below="@+id/frame"
+        android:layout_marginTop="1dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/rl_guard_snap"
+        android:background="@color/ceeeeee" />
+</RelativeLayout>

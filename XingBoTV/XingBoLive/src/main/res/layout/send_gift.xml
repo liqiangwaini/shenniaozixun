@@ -1,0 +1,251 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:padding="12dp">
+
+    <RelativeLayout
+        android:background="@drawable/send_gift_continue_bg"
+        android:id="@+id/ll_send_gift1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:clipChildren="false"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/white_circle" />
+
+        <com.xingbobase.view.FrescoImageView
+            android:id="@+id/avatar1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            app:actualImageScaleType="focusCrop"
+            app:placeholderImage="@mipmap/avatar_placeholder"
+            app:progressBarImageScaleType="centerInside"
+            app:roundAsCircle="true" />
+
+        <RelativeLayout
+            android:id="@+id/ll_people_and_gift1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/avatar1"
+            android:orientation="vertical">
+
+            <TextView
+                android:maxWidth="100dp"
+                android:id="@+id/people1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:singleLine="true"
+                android:text="peoplepeople"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/gift1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="2dp"
+                android:maxWidth="100dp"
+                android:singleLine="true"
+                android:text="送麦克风克"
+                android:textColor="@color/send_gift_lian_color"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <com.xingbobase.view.FrescoImageView
+            android:id="@+id/gift_icon1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ll_people_and_gift1"
+            app:actualImageScaleType="fitCenter"
+            app:placeholderImage="@mipmap/avatar_placeholder"
+            app:progressBarImageScaleType="centerInside" />
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:id="@+id/lian_num1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/gift_icon1"
+            android:text="x66"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_marginBottom="2dp"
+            android:paddingRight="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/lian_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/gift_icon1"
+            android:gravity="bottom|center_horizontal"
+            android:shadowColor="@color/send_gift_num_lian_shadow"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:singleLine="true"
+            android:text="连送 x11"
+            android:textColor="@color/send_gift_lian_num"
+            android:textSize="20sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_marginBottom="2dp"
+            android:paddingRight="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/number1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/lian_text1"
+            android:gravity="center_horizontal|bottom"
+            android:shadowColor="@color/send_gift_num_lian_shadow"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:singleLine="true"
+            android:text="X1"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:clipChildren="true"
+        android:background="@drawable/send_gift_continue_bg"
+        android:id="@+id/ll_send_gift2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ll_send_gift1"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/white_circle" />
+
+        <com.xingbobase.view.FrescoImageView
+            android:id="@+id/avatar2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            app:actualImageScaleType="focusCrop"
+            app:placeholderImage="@mipmap/avatar_placeholder"
+            app:progressBarImageScaleType="centerInside"
+            app:roundAsCircle="true" />
+
+        <RelativeLayout
+            android:id="@+id/ll_people_and_gift2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/avatar2"
+            android:orientation="vertical">
+
+            <TextView
+                android:maxWidth="100dp"
+                android:id="@+id/people2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:singleLine="true"
+                android:text="people"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/gift2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="2dp"
+                android:maxWidth="100dp"
+                android:singleLine="true"
+                android:text="送棒棒糖"
+                android:textColor="@color/send_gift_lian_color"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <com.xingbobase.view.FrescoImageView
+            android:id="@+id/gift_icon2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ll_people_and_gift2"
+            app:actualImageScaleType="fitCenter"
+            app:placeholderImage="@mipmap/avatar_placeholder"
+            app:progressBarImageScaleType="centerInside" />
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:id="@+id/lian_num2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/gift_icon2"
+            android:text="x66"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_marginBottom="2dp"
+            android:paddingRight="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/lian_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/gift_icon2"
+            android:gravity="bottom"
+            android:shadowColor="@color/send_gift_num_lian_shadow"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:singleLine="true"
+            android:text="连送 x116"
+            android:textColor="@color/send_gift_lian_num"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_marginBottom="2dp"
+            android:paddingRight="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/number2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/lian_text2"
+            android:gravity="center_horizontal|bottom"
+            android:shadowColor="@color/send_gift_num_lian_shadow"
+            android:shadowDx="1"
+            android:singleLine="true"
+            android:text="X6"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

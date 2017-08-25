@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:background="@color/black" />
+
+    <LinearLayout
+        android:id="@+id/ll_giftPan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/main_room_gift_pan_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/gift_pan_line_common"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/pink"
+                android:visibility="visible" />
+
+            <!--<View
+                android:id="@+id/gift_pan_line_luck"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/pink"
+                android:visibility="gone" />-->
+
+            <View
+                android:id="@+id/gift_pan_line_advanced"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/pink"
+                android:visibility="invisible" />
+
+            <View
+                android:id="@+id/gift_pan_line_exclusive"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/pink"
+                android:visibility="invisible" />
+
+            <View
+                android:id="@+id/gift_pan_line_bag"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/pink"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_split_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gift_pan_divider_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/gift_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp" />
+
+                <View
+                    android:id="@+id/split_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gift_pan_divider_color" />
+
+                <RelativeLayout
+                    android:id="@+id/gift_pan_bottom_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp">
+
+                    <TextView
+                        android:id="@+id/coin_info_value_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:gravity="center"
+                        android:text="星币:  "
+                        android:textColor="@color/cffffff"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/coin_info_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/coin_info_value_label"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/cffffff"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/gift_pan_recharge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/coin_info_value"
+                        android:gravity="center"
+                        android:text="充值"
+                        android:textColor="@color/pink"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/send_gift_btn"
+                        android:layout_width="60dp"
+                        android:layout_height="33dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/send_gift_btn_bg"
+                        android:text="赠送"
+                        android:textColor="@color/white"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_gift_send_number"
+                        android:layout_width="75dp"
+                        android:layout_height="33dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/send_gift_btn"
+                        android:background="@drawable/choose_gift_number_bg"
+                        android:drawableRight="@mipmap/gift_choose_number"
+                        android:gravity="center"
+                        android:paddingRight="10dp"
+                        android:text="1"
+                        android:textColor="@color/colorTextG1"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <include
+        android:id="@+id/include_choose_gift_number"
+        layout="@layout/popup_choose_gift_number"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="55dp" />
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/answer_js"
+        android:text="Say to JS"
+        android:layout_width="match_parent"
+        android:layout_height="35dp" />
+    <com.xingbobase.view.ProgressWebView
+        android:layout_below="@+id/answer_js"
+        android:id="@+id/test_web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        />
+</RelativeLayout>

@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_apply_anchor_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="19dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/back" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="主播申请"
+        android:textColor="@color/c333333"
+        android:textSize="17sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fl_apply_anchor_back">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="用户ID"
+                android:textColor="@color/c333333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/apply_anchor_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:text="250250"
+                android:textColor="@color/c333333"
+                android:textSize="15sp" />
+
+            <TextView
+                style="@style/apply_anchor_text_style"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/apply_anchor_id"
+                android:text="真实姓名"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/apply_anchor_realname"
+                style="@style/apply_anchor_edit_style"
+                android:layout_width="270dp"
+                android:layout_height="33dp"
+                android:layout_below="@+id/apply_anchor_id"
+                android:hint="请输入真实姓名"
+                android:visibility="visible" />
+
+            <TextView
+                style="@style/apply_anchor_text_style"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/apply_anchor_realname"
+                android:text="性别" />
+
+            <RadioGroup
+                android:id="@+id/apply_anchor_sex"
+                android:layout_width="270dp"
+                android:layout_height="33dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/apply_anchor_realname"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/apply_anchor_sex_male"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:button="@drawable/apply_anchor_sex_selector"
+                    android:checked="true"
+                    android:text="男" />
+
+                <RadioButton
+                    android:id="@+id/apply_anchor_sex_female"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:button="@drawable/apply_anchor_sex_selector"
+                    android:checked="false"
+                    android:text="女" />
+            </RadioGroup>
+
+            <TextView
+                style="@style/apply_anchor_text_style"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/apply_anchor_sex"
+                android:text="所在地"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/apply_anchor_addr"
+                style="@style/apply_anchor_edit_style"
+                android:layout_width="270dp"
+                android:layout_height="33dp"
+                android:layout_below="@+id/apply_anchor_sex"
+                android:hint=""
+                android:visibility="visible" />
+
+            <TextView
+                style="@style/apply_anchor_text_style"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/apply_anchor_addr"
+                android:text="身份证"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/apply_anchor_ID"
+                style="@style/apply_anchor_edit_style"
+                android:layout_width="270dp"
+                android:layout_height="33dp"
+                android:layout_below="@+id/apply_anchor_addr"
+                android:hint="请输入身份证号"
+                android:visibility="visible" />
+
+            <TextView
+                style="@style/apply_anchor_text_style"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/apply_anchor_ID"
+                android:text="手机号"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/apply_anchor_phone"
+                style="@style/apply_anchor_edit_style"
+                android:layout_width="270dp"
+                android:layout_height="33dp"
+                android:layout_below="@+id/apply_anchor_ID"
+                android:hint="请输入手机号"
+                android:visibility="visible" />
+
+            <TextView
+                style="@style/apply_anchor_text_style"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/apply_anchor_phone"
+                android:text="QQ号" />
+
+            <EditText
+                android:id="@+id/apply_anchor_qq"
+                style="@style/apply_anchor_edit_style"
+                android:layout_width="270dp"
+                android:layout_height="33dp"
+                android:layout_below="@+id/apply_anchor_phone"
+                android:hint="请输入QQ号" />
+
+            <TextView
+                style="@style/apply_anchor_text_style"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/apply_anchor_qq"
+                android:text="银行卡号" />
+
+            <EditText
+                android:id="@+id/apply_anchor_card_no"
+                style="@style/apply_anchor_edit_style"
+                android:layout_width="270dp"
+                android:layout_height="33dp"
+                android:layout_below="@+id/apply_anchor_qq"
+                android:hint="请输入银行卡号" />
+
+            <TextView
+                style="@style/apply_anchor_text_style"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/apply_anchor_card_no"
+                android:text="开户银行" />
+
+            <TextView
+                android:id="@+id/apply_anchor_bankid"
+                style="@style/apply_anchor_edit_style"
+                android:layout_width="270dp"
+                android:layout_height="33dp"
+                android:layout_below="@+id/apply_anchor_card_no"
+                android:drawableRight="@mipmap/apply_anchor_down"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:text="中国银行" />
+
+            <TextView
+                android:id="@+id/apply_anchor_workstation"
+                style="@style/apply_anchor_text_style"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/apply_anchor_bankid"
+                android:text="网点信息" />
+
+            <TextView
+                android:id="@+id/apply_anchor_area"
+                style="@style/apply_anchor_edit_style"
+                android:layout_width="130dp"
+                android:layout_height="33dp"
+                android:layout_below="@+id/apply_anchor_bankid"
+                android:drawableRight="@mipmap/apply_anchor_down"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:text="海淀区" />
+
+            <TextView
+                android:id="@+id/apply_anchor_city"
+                style="@style/apply_anchor_edit_style"
+                android:layout_width="130dp"
+                android:layout_height="33dp"
+                android:layout_below="@+id/apply_anchor_bankid"
+                android:layout_marginRight="150dp"
+                android:drawableRight="@mipmap/apply_anchor_down"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:text="北京" />
+
+            <TextView
+                style="@style/apply_anchor_text_style"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/apply_anchor_workstation"
+                android:text="支行信息" />
+
+            <EditText
+                android:id="@+id/apply_anchor_branch"
+                style="@style/apply_anchor_edit_style"
+                android:layout_width="270dp"
+                android:layout_height="33dp"
+                android:layout_below="@+id/apply_anchor_workstation"
+                android:text="" />
+
+            <TextView
+                style="@style/apply_anchor_text_style"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/apply_anchor_branch"
+                android:text="开户姓名" />
+
+            <EditText
+                android:id="@+id/apply_anchor_account"
+                style="@style/apply_anchor_edit_style"
+                android:layout_width="270dp"
+                android:layout_height="33dp"
+                android:layout_below="@+id/apply_anchor_branch"
+                android:hint="银行卡开户人姓名"
+                android:text="" />
+
+            <TextView
+                style="@style/apply_anchor_text_style"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/apply_anchor_account"
+                android:text="身份证照" />
+
+            <ImageView
+                android:id="@+id/apply_anchor_ID_photo_sample"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/apply_anchor_account"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="18dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/id_photo" />
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/apply_anchor_account"
+                android:layout_marginTop="18dp"
+                android:layout_toLeftOf="@+id/apply_anchor_ID_photo_sample"
+                android:drawablePadding="5dp"
+                android:drawableTop="@mipmap/arrow_right"
+                android:gravity="center"
+                android:paddingBottom="27dp"
+                android:paddingTop="27dp"
+                android:text="参考示例"
+                android:textColor="@color/c999999"
+                android:textSize="12sp" />
+
+            <com.xingbobase.view.FrescoImageView
+                android:id="@+id/apply_anchor_id_photo"
+                android:layout_width="115dp"
+                android:layout_height="80dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/apply_anchor_account"
+                android:layout_marginRight="167dp"
+                android:layout_marginTop="18dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/id_photo"
+                app:placeholderImage="@mipmap/id_photo"
+                app:roundAsCircle="false" />
+
+            <RelativeLayout
+                android:id="@+id/loading_box_ID"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/apply_anchor_account"
+                android:layout_marginRight="210dp"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/upload_header_loading_bg_ract"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:id="@+id/loading_header_view_ID"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:background="@anim/xingbo_loading" />
+
+                <TextView
+                    android:id="@+id/header_upload_pro_ID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="0%"
+                    android:textColor="@color/orange_FF582B"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/apply_anchor_text_style"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/apply_anchor_id_photo"
+                android:text="直播封面" />
+
+            <com.xingbobase.view.FrescoImageView
+                android:id="@+id/apply_anchor_logo"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/apply_anchor_id_photo"
+                android:layout_marginRight="192dp"
+                android:layout_marginTop="18dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/apply_anchor_logo"
+                app:placeholderImage="@mipmap/apply_anchor_logo"
+                app:roundAsCircle="false" />
+
+            <RelativeLayout
+                android:id="@+id/loading_box_cover_logo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/apply_anchor_id_photo"
+                android:layout_marginRight="220dp"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/upload_header_loading_bg_ract"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:id="@+id/loading_header_view_cover_logo"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:background="@anim/xingbo_loading" />
+
+                <TextView
+                    android:id="@+id/header_upload_pro_cover_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="0%"
+                    android:textColor="@color/orange_FF582B"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/apply_anchor_text_style"
+                android:layout_width="90dp"
+                android:layout_height="33dp"
+                android:layout_below="@+id/apply_anchor_id_photo"
+                android:layout_marginTop="18dp"
+                android:layout_toLeftOf="@+id/apply_anchor_art_logo"
+                android:text="艺术照片" />
+
+            <com.xingbobase.view.FrescoImageView
+                android:id="@+id/apply_anchor_art_logo"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/apply_anchor_id_photo"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="18dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/apply_anchor_logo"
+                app:placeholderImage="@mipmap/apply_anchor_logo"
+                app:roundAsCircle="false" />
+
+            <RelativeLayout
+                android:id="@+id/loading_box_art_logo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/apply_anchor_id_photo"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/upload_header_loading_bg_ract"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:id="@+id/loading_header_view_art_logo"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:background="@anim/xingbo_loading" />
+
+                <TextView
+                    android:id="@+id/header_upload_pro_art_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="0%"
+                    android:textColor="@color/orange_FF582B"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/apply_anchor_text_style"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/apply_anchor_logo"
+                android:text="才艺视频链接" />
+
+            <EditText
+                android:id="@+id/apply_anchor_acqierement"
+                style="@style/apply_anchor_edit_style"
+                android:layout_width="245dp"
+                android:layout_height="33dp"
+                android:layout_below="@+id/apply_anchor_logo"
+                android:hint="提供才艺视频地址，以供评委参考！"
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/apply_anchor_edit_rules"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/apply_anchor_acqierement"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开通默认同意接受"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="《星播TV手机直播管理条例》"
+                    android:textColor="@color/message_textcolor"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/apply_anchor_commit"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_below="@+id/apply_anchor_edit_rules"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="37dp"
+                android:layout_marginRight="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/apply_tobe_anchor_commit_selector"
+                android:gravity="center"
+                android:text="提交申请"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

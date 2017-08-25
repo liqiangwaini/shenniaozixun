@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="270dp"
+    android:layout_height="150dp"
+    android:background="@drawable/anchor_into_live_dialog_bg">
+
+    <TextView
+        android:textSize="15sp"
+        android:id="@+id/tv_desc"
+        android:layout_width="270dp"
+        android:layout_height="110dp"
+        android:gravity="center"
+        android:lineSpacingExtra="13dp"
+        android:text="您还不是主播，\n该功能只对主播开放..."
+        android:textColor="@color/c333333" />
+
+    <View
+        android:layout_width="270dp"
+        android:layout_height="1px"
+        android:layout_below="@+id/tv_desc"
+        android:background="@color/colorTextG1" />
+
+    <TextView
+        android:id="@+id/tv_back"
+        android:layout_width="135dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tv_desc"
+        android:gravity="center"
+        android:text="返回"
+        android:textColor="@color/c333333"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tv_desc"
+        android:layout_toRightOf="@+id/tv_back"
+        android:background="@color/colorTextG1" />
+
+    <TextView
+        android:id="@+id/tv_begin"
+        android:textSize="15sp"
+        android:textColor="@color/pink"
+        android:layout_width="135dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tv_desc"
+        android:layout_toRightOf="@+id/tv_back"
+        android:gravity="center"
+        android:text="申请开播" />
+
+</RelativeLayout>

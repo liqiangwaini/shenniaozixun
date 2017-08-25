@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tab_item"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="私聊"
+        android:layout_centerInParent="true"
+        />
+    <TextView
+        android:id="@+id/tab_item_num_msg"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:background="@drawable/pager_tab_private_chat_tab_num_bg"
+        android:text="0"
+        android:textSize="8sp"
+        android:textColor="@color/white"
+        android:layout_margin="3dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:visibility="gone"
+        />
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/loading_view_box"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#5cAEAEAE"
+        android:layout_below="@+id/top_bar"
+        >
+        <ImageView
+            android:id="@+id/loading_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@anim/xingbo_loading"
+            android:layout_centerInParent="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cDDDDDD"
+            android:textSize="16sp"
+            android:text="正在获数据..."
+            android:layout_below="@+id/loading_view"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

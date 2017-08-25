@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/choose_gift_number_pop"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="208dp"
+        android:background="@drawable/gift_pan_choose_number"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/popup_choose_number_undefined"
+            android:layout_width="150dp"
+            android:layout_height="33dp"
+            android:gravity="center"
+            android:text="自定义"
+            android:textColor="@drawable/gift_pan_choose_number_selector"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:background="@color/grey_light" />
+
+        <LinearLayout
+            android:id="@+id/popup_choose_number_1314"
+            android:layout_width="150dp"
+            android:layout_height="33dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="1314"
+                android:textColor="@drawable/gift_pan_choose_number_selector"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="一生一世"
+                android:textColor="@drawable/gift_pan_choose_number_selector"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:background="@color/grey_light" />
+
+        <LinearLayout
+            android:id="@+id/popup_choose_number_520"
+            android:layout_width="150dp"
+            android:layout_height="33dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="520"
+                android:textColor="@drawable/gift_pan_choose_number_selector"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="我爱你"
+                android:textColor="@drawable/gift_pan_choose_number_selector"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:background="@color/grey_light" />
+
+        <LinearLayout
+            android:id="@+id/popup_choose_number_188"
+            android:layout_width="150dp"
+            android:layout_height="33dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="188"
+                android:textColor="@drawable/gift_pan_choose_number_selector"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="要抱抱"
+                android:textColor="@drawable/gift_pan_choose_number_selector"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:background="@color/grey_light" />
+
+        <LinearLayout
+            android:id="@+id/popup_choose_number_66"
+            android:layout_width="150dp"
+            android:layout_height="33dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="66"
+                android:textColor="@drawable/gift_pan_choose_number_selector"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="顺顺利利"
+                android:textColor="@drawable/gift_pan_choose_number_selector"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:background="@color/grey_light" />
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:id="@+id/popup_choose_number_10"
+            android:layout_width="150dp"
+            android:layout_height="33dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="10"
+                android:textColor="@drawable/gift_pan_choose_number_selector"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="十全十美"
+                android:textColor="@drawable/gift_pan_choose_number_selector"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

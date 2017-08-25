@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.8"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/live_anchor_switch_camera"
+            android:layout_width="0dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:drawablePadding="18dp"
+            android:drawableTop="@mipmap/live_anchor_switch_camera"
+            android:gravity="center"
+            android:text="翻转摄像头"
+            android:textColor="@color/colorTextG1"
+            android:textSize="12sp" />
+
+
+        <RelativeLayout
+            android:id="@+id/live_anchor_beauty"
+            android:layout_width="0dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:text="美颜"
+                android:textColor="@color/colorTextG1"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/live_anchor_beauty_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/live_anchor_beauty" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/live_anchor_flash"
+            android:layout_width="0dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:text="闪光灯"
+                android:textColor="@color/colorTextG1"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/live_anchor_flash_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/live_anchor_flash" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/live_anchor_admin"
+            android:layout_width="0dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:drawablePadding="18dp"
+            android:drawableTop="@mipmap/live_anchor_admin"
+            android:gravity="center"
+            android:text="管理员"
+            android:textColor="@color/colorTextG1"
+            android:textSize="12sp" />
+    </LinearLayout>
+</RelativeLayout>

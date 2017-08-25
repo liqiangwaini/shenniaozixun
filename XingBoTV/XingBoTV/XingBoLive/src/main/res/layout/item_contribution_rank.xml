@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:layout_marginTop="5dp"
+    android:background="@color/cffffff"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/item_contribution_rank"
+        android:layout_width="30dp"
+        android:layout_height="55dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="13dp"
+        android:gravity="center"
+        android:text="12"
+        android:textColor="@color/c666666"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+    <com.xingbobase.view.FrescoImageView
+        android:id="@+id/item_contribution_avator"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="13dp"
+        android:layout_toRightOf="@+id/item_contribution_rank"
+        android:clickable="true"
+        app:actualImageScaleType="focusCrop"
+        app:placeholderImage="@mipmap/avatar_placeholder"
+        app:roundAsCircle="true" />
+
+    <RelativeLayout
+        android:id="@+id/rl_contribute_nick_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@+id/item_contribution_avator">
+
+        <TextView
+            android:id="@+id/item_contribution_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:singleLine="true"
+            android:text="鹿晗的星星"
+            android:textColor="@color/colorTextG4"
+            android:textSize="12sp" />
+        <ImageView
+            android:id="@+id/item_contribution_richlvl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/item_contribution_nick"
+            android:scaleType="fitXY"
+            android:src="@mipmap/rich_level_icon_10" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/gongxian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_contribute_nick_level"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/item_contribution_avator"
+        android:text="贡献"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/item_contribution_coin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_contribute_nick_level"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/gongxian"
+        android:text="112032"
+        android:textColor="@color/pink"
+        android:textSize="12sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_contribute_nick_level"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/item_contribution_coin"
+        android:text="星币"
+        android:textSize="12sp" />
+</RelativeLayout>

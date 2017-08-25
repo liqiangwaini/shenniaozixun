@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xingbobase.view.FrescoImageView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/image_item1"
+    app:actualImageScaleType="centerCrop"
+    android:layout_width="86dp"
+    android:layout_height="86dp"
+    android:paddingLeft="1dp"
+    android:paddingRight="1dp"
+    android:background="@color/cEEEEEE"
+     />

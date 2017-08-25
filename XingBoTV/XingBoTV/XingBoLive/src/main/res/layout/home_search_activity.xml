@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/cEEEEEE">
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/cffffff"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+        <ImageButton
+            android:id="@+id/top_back_btn"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/back"
+            android:paddingRight="15dp"
+            android:paddingLeft="10dp"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            />
+
+        <com.xingbo.live.emotion.EmotionEditText
+            android:paddingLeft="10dp"
+            android:layout_width="310dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:id="@+id/home_search_edit"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:hint=" 输入你想要的用户"
+            android:drawableLeft="@mipmap/home_search_ic"
+            android:textSize="17sp"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"
+            android:textColor="@color/c999999"
+            android:background="@drawable/search_edit_bg"/>
+        <TextView
+            android:id="@+id/ensure_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="搜索"
+            android:textSize="17sp"
+            android:textColor="@color/c333333"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/home_search_edit"
+            />
+    </LinearLayout>
+
+
+    <com.xingbobase.extra.pulltorefresh.PullToRefreshListView
+        android:id="@+id/home_search_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_bar"
+        android:layout_marginTop="5dp"
+        ></com.xingbobase.extra.pulltorefresh.PullToRefreshListView>
+
+</RelativeLayout>

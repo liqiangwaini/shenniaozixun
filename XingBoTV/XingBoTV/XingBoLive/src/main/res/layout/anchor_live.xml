@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/surfaceview_live"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <View
+        android:id="@+id/live_anchor_black_back"
+        android:background="@color/black"
+        android:alpha="0.3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/live_anchor_info"
+        android:layout_width="115dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/main_room_hasconcerned">
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/white_circle" />
+
+        <com.xingbobase.view.FrescoImageView
+            android:id="@+id/live_anchor_avator"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/avatar"
+            app:placeholderImage="@mipmap/avatar_placeholder"
+            app:roundAsCircle="true" />
+
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/live_anchor_nick"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/live_anchor_avator"
+            android:singleLine="true"
+            android:text="吆吆吆吆吆"
+            android:textSize="12sp" />
+
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/live_anchor_fannum"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/live_anchor_nick"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/live_anchor_avator"
+            android:singleLine="true"
+            android:text="50520人"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/live_anchor_visitors"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/live_anchor_info"
+        android:fadingEdge="none" />
+
+    <ImageView
+        android:id="@+id/live_anchor_cancel"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="19dp"
+        android:scaleType="center"
+        android:src="@mipmap/close_main_room" />
+
+    <TextView
+        android:id="@+id/live_anchor_coin"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_below="@+id/live_anchor_info"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/main_room_rich_bg"
+        android:drawablePadding="5dp"
+        android:drawableRight="@mipmap/next_main_room"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:singleLine="true"
+        android:text="经验值：0"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+    <com.xingbo.live.view.ScrollGift
+        android:layout_marginTop="100dp"
+        android:id="@+id/live_anchor_scroll_gift"
+        android:layout_width="match_parent"
+        android:layout_height="22dp" />
+    <master.flame.danmaku.ui.widget.DanmakuView
+        android:id="@+id/live_anchor_danmu"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_above="@+id/live_anchor_message_list"
+        android:layout_marginBottom="10dp" />
+
+    <com.xingbo.live.view.ShowGift
+        android:id="@+id/live_anchor_gift"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_above="@+id/live_anchor_danmu" />
+
+    <ImageView
+        android:id="@+id/live_anchor_more"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="12dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/live_anchor_more_selector" />
+
+    <ImageView
+        android:id="@+id/live_anchor_share"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/live_anchor_more"
+        android:src="@mipmap/share_main_room" />
+
+    <ImageView
+        android:id="@+id/live_anchor_pri"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@+id/live_anchor_share"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/secret_message" />
+
+    <TextView
+        android:id="@+id/live_anchor_pri_count"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@+id/live_anchor_share"
+        android:background="@drawable/main_room_pri_message_count_bg"
+        android:gravity="center"
+        android:text="1"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:visibility="gone"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/live_anchor_pri"
+        android:src="@mipmap/connect_main_room" />
+
+    <ListView
+        android:id="@+id/live_anchor_message_list"
+        android:layout_width="match_parent"
+        android:layout_height="116dp"
+        android:layout_above="@+id/live_anchor_more"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="60dp"
+        android:background="@color/transparent"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:listSelector="@color/transparent"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:scrollbars="none"
+        android:stackFromBottom="true"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/ll_live_anchor_more"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/include_live_anchor_more"
+            layout="@layout/live_anchor_more"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible" />
+
+        <View
+            android:id="@+id/live_anchor_more_blank"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/include_live_anchor_more" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/live_anchor_pri_message_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/include_live_anchor_pri_msg"
+            layout="@layout/main_room_pri_msg"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:layout_alignParentBottom="true" />
+
+        <View
+            android:id="@+id/blank_pri_msg_live_anchor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/include_live_anchor_pri_msg" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/live_anchor_pri_message_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/include_live_anchor_pri_msg"
+            layout="@layout/main_room_pri_msg_detail"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:layout_alignParentBottom="true" />
+
+        <View
+            android:id="@+id/blank_pri_msg_detail_live_anchor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/include_live_anchor_pri_msg" />
+    </RelativeLayout>
+    <include
+        android:id="@+id/include_close_live"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/close_live_act"/>
+</RelativeLayout>

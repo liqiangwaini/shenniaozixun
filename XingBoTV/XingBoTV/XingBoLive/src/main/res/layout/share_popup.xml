@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_share_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="分享到"
+        android:textColor="@color/c666666"
+        android:textSize="15sp" />
+    <ImageView
+        android:id="@+id/iv_share_popup_cancel"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/close_main_room"
+        android:layout_width="15dp"
+        android:layout_height="15dp" />
+
+    <LinearLayout
+        android:paddingBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_share_popup"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/share_weixin"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@mipmap/login_chat" />
+
+        <ImageView
+            android:id="@+id/share_friends"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@mipmap/share_friends" />
+
+        <ImageView
+            android:id="@+id/share_qq"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@mipmap/login_qq_icon" />
+
+        <ImageView
+            android:id="@+id/share_sina"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@mipmap/login_sina_icon" />
+    </LinearLayout>
+
+</RelativeLayout>

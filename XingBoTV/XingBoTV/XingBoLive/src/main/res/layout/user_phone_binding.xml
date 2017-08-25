@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cEEEEEE"
+    >
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/cffffff"
+        android:layout_alignParentTop="true"
+        >
+        <ImageButton
+            android:id="@+id/top_back_btn"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/back"
+            android:paddingRight="15dp"
+            android:paddingLeft="10dp"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:id="@+id/phone_binding_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="50dp"
+            android:gravity="center"
+            android:text="绑定手机"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@+id/top_back_btn"
+            />
+    </RelativeLayout>
+
+
+    <com.xingbo.live.emotion.EmotionEditText
+        android:paddingLeft="5dp"
+        android:layout_width="300dp"
+        android:layout_height="33dp"
+        android:id="@+id/user_phone_num_edit"
+        android:layout_below="@id/top_bar"
+        android:background="@drawable/phone_binding"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="30dp"
+        android:textSize="15sp"
+        android:hint="请输入手机号"/>
+
+  <LinearLayout
+      android:layout_width="300dp"
+      android:layout_height="33dp"
+      android:id="@+id/phone_binding_code"
+      android:layout_below="@+id/user_phone_num_edit"
+
+      android:layout_marginLeft="37dp"
+      android:orientation="horizontal"
+      android:layout_marginTop="30dp">
+      <com.xingbo.live.emotion.EmotionEditText
+          android:paddingLeft="5dp"
+          android:layout_width="0dp"
+          android:layout_height="33dp"
+          android:layout_weight="1"
+          android:id="@+id/user_phone_binding_code_edit"
+          android:background="@drawable/phone_binding"
+          android:hint="填写手机验证码"
+          android:textSize="15sp"/>
+      <Button
+          android:layout_width="90dp"
+          android:layout_height="33dp"
+          android:id="@+id/get_code"
+          android:layout_toLeftOf="@+id/user_phone_binding_code_edit"
+          android:textSize="15sp"
+          android:layout_marginLeft="10dp"
+          android:textColor="@color/cffffff"
+          android:text="发送验证码"
+          android:background="@drawable/phone_binding_sendcode"/>
+  </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_phone_binding_hint"
+        android:layout_below="@+id/phone_binding_code"
+        android:textSize="12sp"
+        android:layout_marginTop="5dp"
+        android:visibility="invisible"
+        android:textColor="@color/c999999"
+        android:layout_alignBaseline="@+id/phone_binding_code"
+        android:layout_marginLeft="35dp"
+        android:text="运营商将会给您发送短信验证码,请注意查收"
+        />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="44dp"
+        android:id="@+id/phone_binding_sure"
+        android:layout_below="@+id/phone_binding_code"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="37dp"
+        android:background="@drawable/user_info_card_concern"
+        android:textColor="@color/cffffff"
+        android:text="确定"
+        />
+
+
+
+
+
+
+</RelativeLayout>

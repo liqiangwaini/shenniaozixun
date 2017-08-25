@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <ImageView
+        android:alpha="0.5"
+        android:src="@drawable/welcome"
+        android:id="@+id/login_other_bg_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        />
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentTop="true"
+        android:background="@null">
+
+        <ImageButton
+            android:id="@+id/top_back_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/user_portrait_back" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_bar"
+        android:layout_centerHorizontal="true">
+
+        <com.xingbobase.view.widget.XingBoEditText
+            android:id="@+id/account"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="120dp"
+            android:background="@null"
+            android:hint="手机号"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@color/cffffff"
+            android:textColorHint="#cccccc"
+            android:textSize="12sp" />
+
+        <View
+            android:id="@+id/divider0"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/account"
+
+            android:background="#ffD5D5D5" />
+
+        <LinearLayout
+            android:id="@+id/ll_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider0"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.xingbobase.view.widget.XingBoEditText
+                    android:id="@+id/check_phone_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/divider0"
+                    android:background="@null"
+                    android:hint="输入手机验证码"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/cffffff"
+                    android:textColorHint="#cccccc"
+                    android:textSize="12sp" />
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#ffD5D5D5" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/check_phone"
+                android:layout_width="80dp"
+                android:layout_height="33dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/register_code_get"
+                android:gravity="center"
+                android:text="获取验证码"
+                android:textColor="@color/cffffff"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <com.xingbobase.view.widget.XingBoEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/ll_container"
+            android:background="@null"
+            android:hint="请输入6至16位密码,仅限数字和字母"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@color/cffffff"
+            android:textColorHint="#cccccc"
+            android:textSize="12sp" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/password"
+
+            android:background="#ffD5D5D5" />
+
+        <Button
+            android:id="@+id/register_btn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/divider2"
+            android:layout_margin="15dp"
+            android:background="@drawable/login_and_register_bg"
+            android:text="注册"
+            android:textColor="@color/c333333"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_below="@+id/register_btn" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/xingbo_lisence_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="37dp"
+        android:text="《星播TV用户许可及服务协议》"
+        android:textColor="@color/c999999"
+        android:textSize="12sp"
+
+        />
+</RelativeLayout>
